@@ -1,0 +1,12 @@
+# Disney
+DOMAIN,www.disneyplus.com
+DOMAIN,cnbl-cdn.bamgrid.com
+DOMAIN,prod-static.disney-plus.net
+DOMAIN,static-assets.bamgrid.com
+DOMAIN,prod-ripcut-delivery.disney-plus.net
+DOMAIN,bam-sdk-configs.bamgrid.com
+DOMAIN,vod-akc-ap-west-2.media.dssott.com
+DOMAIN,vod-bgc-oc-east-1.media.dssott.com
+DOMAIN-SUFFIX,bamgrid.com
+DOMAIN-SUFFIX,media.dssott.com
+DOMAIN-SUFFIX,disney-plus.net
