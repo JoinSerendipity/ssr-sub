@@ -1,6 +1,8 @@
 # Proxy
 DOMAIN-SUFFIX,1password.com
-DOMAIN, api.x.com, 🔰 Proxy
+DOMAIN,api.x.com
+DOMAIN,fuqing.cz
+DOMAIN,wd-gold.com
 DOMAIN-SUFFIX,adguard.org
 DOMAIN-SUFFIX,bit.no.com
 DOMAIN-SUFFIX,btlibrary.me
