@@ -3,6 +3,7 @@ DOMAIN-SUFFIX,1password.com
 DOMAIN,api.x.com
 DOMAIN,fuqing.cz
 DOMAIN,wd-gold.com
+DOMAIN,api.leiting.io
 DOMAIN-SUFFIX,adguard.org
 DOMAIN-SUFFIX,bit.no.com
 DOMAIN-SUFFIX,btlibrary.me
@@ -55,9 +56,13 @@ DOMAIN-KEYWORD,telegram
 DOMAIN-KEYWORD,twitter
 DOMAIN-KEYWORD,whatsapp
 DOMAIN-KEYWORD,youtube
+DOMAIN-KEYWORD,missav
 DOMAIN-SUFFIX,gfwlist.start
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,030buy.com
+DOMAIN-SUFFIX,missav.com
+DOMAIN-SUFFIX,sehuatang.net
+DOMAIN-SUFFIX,leiting.io
 DOMAIN-SUFFIX,0rz.tw
 DOMAIN-SUFFIX,1-apple.com.tw
 DOMAIN-SUFFIX,10.tt
