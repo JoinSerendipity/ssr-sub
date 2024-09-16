@@ -13,3 +13,7 @@ DOMAIN-SUFFIX,portainer.io
 DOMAIN-SUFFIX,bootstrapcdn.com
 DOMAIN-SUFFIX,mingw-w64.org
 DOMAIN-SUFFIX,docker.io
+DOMAIN-SUFFIX,vultr.com
+DOMAIN-SUFFIX,cloudflare.com
+DOMAIN-SUFFIX,namecheap.com
+DOMAIN-SUFFIX,hostwinds.com
