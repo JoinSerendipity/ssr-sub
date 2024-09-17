@@ -1,10 +1,2 @@
 # PIKPAK
-DOMAIN, user.mypikpak.com
-DOMAIN-SUFFIX, mypikpak.com
-DOMAIN, mypikpak.com
-DOMAIN, static.mypikpak.com
-DOMAIN, access.mypikpak.com
-DOMAIN, api-drive.mypikpak.com
-DOMAIN, res-etl-ssl.mypikpak.com
-DOMAIN, rcv5-sp.mypikpak.com
-DOMAIN, config.mypikpak.com
+DOMAIN-SUFFIX,mypikpak.com
