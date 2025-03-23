@@ -1,0 +1,11 @@
+[SwitchyOmega Conditions]
+; Require: SwitchyOmega >= 2.3.2
+; Date: 2025/3/23
+
+*.bilibili.com
+*.hdslb.com
+*.bilivideo.com
+*.cn
+*.biliapi.net
+*.biligame.com
+*.lggzs.com
