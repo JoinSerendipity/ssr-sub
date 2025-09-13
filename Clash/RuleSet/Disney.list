@@ -3,3 +3,6 @@ DOMAIN,www.disneyplus.com
 DOMAIN-SUFFIX,bamgrid.com
 DOMAIN-SUFFIX,media.dssott.com
 DOMAIN-SUFFIX,disney-plus.net
+#HBO
+DOMAIN-SUFFIX,hbomax.com
+DOMAIN-SUFFIX,hbo.com
