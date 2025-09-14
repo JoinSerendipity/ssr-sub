@@ -1,6 +1,6 @@
 [SwitchyOmega Conditions]
 ; Require: SwitchyOmega >= 2.3.2
-; Date: 2025/3/23
+; Date: 2025/9/14
 
 *.bilibili.com
 *.hdslb.com
@@ -10,3 +10,4 @@
 *.biliapi.net
 *.biligame.com
 *.lggzs.com
+*.douyin.com
