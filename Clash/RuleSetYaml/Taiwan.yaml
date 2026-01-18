@@ -1,0 +1,19 @@
+# Taiwan
+payload:
+  - DOMAIN-SUFFIX,tw
+  - DOMAIN,sunapi.catchplay.com
+  - DOMAIN-SUFFIX,kktv.com.tw
+  - DOMAIN-SUFFIX,kktv.me
+  - DOMAIN-SUFFIX,gamer.com.tw
+  - DOMAIN-SUFFIX,bahamut.com.tw
+  - DOMAIN-SUFFIX,hinet.net
+  - DOMAIN-SUFFIX,catchplay.com
+  - DOMAIN-SUFFIX,myvideo.net.tw
+  - DOMAIN-SUFFIX,ebc.net.tw
+  - DOMAIN-SUFFIX,litv.tv
+  - DOMAIN-SUFFIX,aralego.com
+  - DOMAIN-SUFFIX,linetv.tw
+  - DOMAIN-SUFFIX,blendvision.com
+  - DOMAIN-SUFFIX,kkbox.com
+  - DOMAIN-SUFFIX,linux.do
+  - DOMAIN-SUFFIXidcflare.com

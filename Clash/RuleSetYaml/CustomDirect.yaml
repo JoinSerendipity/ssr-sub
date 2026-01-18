@@ -1,0 +1,7 @@
+# 自定义直连
+payload:
+  - DOMAIN-SUFFIX,mini4k.com
+  - DOMAIN-SUFFIX,mini4k.net
+  - DOMAIN-SUFFIX,mini4k.io
+  - DOMAIN-SUFFIX,mojidict.com
+  - DOMAIN-SUFFIX,stripe.com

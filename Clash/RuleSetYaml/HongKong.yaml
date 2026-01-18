@@ -1,0 +1,17 @@
+# HongKong
+payload:
+  - DOMAIN-SUFFIX,hk
+  - DOMAIN-SUFFIX,now.com
+  - DOMAIN,images.now-tv.com
+  - DOMAIN,cognito-identity.us-east-1.amazonaws.com
+  - DOMAIN,pinpoint.us-east-1.amazonaws.com
+  - DOMAIN,d1k2us671qcoau.cloudfront.net
+  - DOMAIN,d1ckiw6kv3s3l5.cloudfront.net
+  - DOMAIN,sg1.wzrkt.com
+  - DOMAIN,d3o7oi00quuwqu.cloudfront.net
+  - DOMAIN,d2anahhhmp1ffz.cloudfront.net
+  - DOMAIN-SUFFIX,viu.com
+  - DOMAIN-SUFFIX,viu.tv
+  - DOMAIN-SUFFIX,simworld.net
+  - DOMAIN-SUFFIX,nowe.com
+  - DOMAIN-SUFFIX,moov.hk

@@ -1,0 +1,22 @@
+# Japan
+payload:
+  - DOMAIN,api-abematv.bucketeer.jp
+  - DOMAIN,mobile-collector.newrelic.com
+  - DOMAIN,api-abematv.bucketeer.jp
+  - DOMAIN-SUFFIX,dmm.com
+  - DOMAIN-SUFFIX,brightcove.net
+  - DOMAIN-SUFFIX,brightcove.com
+  - DOMAIN-SUFFIX,boltdns.net
+  - DOMAIN-SUFFIX,dmm.co.jp
+  - DOMAIN-SUFFIX,tver.jp
+  - DOMAIN-SUFFIX,abema.tv
+  - DOMAIN-SUFFIX,akamaized.net
+  - DOMAIN-SUFFIX,abema-tv.com
+  - DOMAIN-SUFFIX,abema.io
+  - DOMAIN-SUFFIX,abema.jp
+  - DOMAIN-SUFFIX,nicovideo.jp
+  - DOMAIN-SUFFIX,nimg.jp
+  - DOMAIN,liveedge270.dmc.nico
+  - DOMAIN-SUFFIX,unext.jp
+  - DOMAIN-SUFFIX,nxtv.jp
+  - DOMAIN-SUFFIX,jp
