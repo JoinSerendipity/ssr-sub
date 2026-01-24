@@ -20,7 +20,7 @@ const ruleProviderSources = {
   "Emby": "https://cdn.jsdelivr.net/gh/JoinSerendipity/ssr-sub@master/Clash/RuleSetYaml/Emby.yaml",
   "Porn": "https://cdn.jsdelivr.net/gh/JoinSerendipity/ssr-sub@master/Clash/RuleSetYaml/Porn.yaml",
   "BanAD": "https://cdn.jsdelivr.net/gh/JoinSerendipity/ssr-sub@master/Clash/RuleSetYaml/BanAD.yaml",
-  "BanProgramAD": "https://cdn.jsdelivr.net/gh/JoinSerendipity/ssr-sub@master/Clash/RuleSetYaml/Clash/BanProgramAD.yaml",
+  "BanProgramAD": "https://cdn.jsdelivr.net/gh/JoinSerendipity/ssr-sub@master/Clash/RuleSetYaml/BanProgramAD.yaml",
   "Google": "https://cdn.jsdelivr.net/gh/JoinSerendipity/ssr-sub@master/Clash/RuleSetYaml/Google.yaml",
   "GoogleCN": "https://cdn.jsdelivr.net/gh/JoinSerendipity/ssr-sub@master/Clash/RuleSetYaml/GoogleCN.yaml",
   "Microsoft": "https://cdn.jsdelivr.net/gh/JoinSerendipity/ssr-sub@master/Clash/RuleSetYaml/Microsoft.yaml",
