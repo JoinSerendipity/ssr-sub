@@ -49,4 +49,5 @@ payload:
   - DOMAIN-SUFFIX,nodeseek.com
   - DOMAIN-SUFFIX,nodeloc.com
   - DOMAIN-SUFFIX,immersivetranslate.com
+  - DOMAIN-SUFFIX,1music.cc
   - DOMAIN-KEYWORD,angular
