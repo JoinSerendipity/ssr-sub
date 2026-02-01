@@ -1,0 +1,18 @@
+# HongKong
+payload:
+  - "+.hk"
+  - "+.now.com"
+  - "images.now-tv.com"
+  - "cognito-identity.us-east-1.amazonaws.com"
+  - "pinpoint.us-east-1.amazonaws.com"
+  - "d1k2us671qcoau.cloudfront.net"
+  - "d1ckiw6kv3s3l5.cloudfront.net"
+  - "sg1.wzrkt.com"
+  - "d3o7oi00quuwqu.cloudfront.net"
+  - "d2anahhhmp1ffz.cloudfront.net"
+  - "+.viu.com"
+  - "+.viu.tv"
+  - "+.simworld.net"
+  - "+.nowe.com"
+  - "+.moov.hk"
+  - "+.course.rs"
