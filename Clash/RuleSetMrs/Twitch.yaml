@@ -1,0 +1,7 @@
+# Twitch
+payload:
+  - "+.twitch.tv"
+  - "+.hls.ttvnw.net"
+  - "+.ttvnw.net"
+  - "+.twitch.com"
+  - "+.kick.com"
