@@ -110,12 +110,12 @@ function main(config) {
     groupAuto,   // ♻️ 自动选择
     createSelectGroup("💬 ChatGPT", "(.*)"),
     createSelectGroup("📽️ Netflix", "(.*)"),
-    createSelectGroup("🇨🇳 Taiwan", "(台湾|Taiwan)"),
-    createSelectGroup("🎬 BILIBILI", "(香港|Hong Kong|台湾|Taiwan)"),
+    createSelectGroup("🇨🇳 Taiwan", "(台湾|Taiwan|TW)"),
+    createSelectGroup("🎬 BILIBILI", "(香港|Hong Kong|台湾|Taiwan|TW)"),
     createSelectGroup("🎮 Steam 登录/下载", "(.*)"),
     createSelectGroup("🎮 Steam 商店/社区", "(.*)"),
     createSelectGroup("🛠 PIKPAK", "(.*)"),
-    createSelectGroup("🇭🇰 HongKong", "(香港|Hong Kong)"),
+    createSelectGroup("🇭🇰 HongKong", "(香港|Hong Kong|HK)"),
     {
       name: "Ⓜ️ Microsoft", // 特殊：微软分流只包含直连和节点选择(根据你的规则)
       type: "select",
@@ -125,7 +125,7 @@ function main(config) {
     createSelectGroup("📺 TIKTOK", "(.*)"),
     createSelectGroup("🎙 Twitch", "(.*)"),
     createSelectGroup("🎥 Disney", "(.*)"),
-    createSelectGroup("🇯🇵 Japan", "(日本|Japan)"),
+    createSelectGroup("🇯🇵 Japan", "(日本|Japan|JP)"),
     createSelectGroup("🇰🇷 Korea", "(.*)"), // 注意：你提供的规则里 Korea 没有正则，默认全部
     createSelectGroup("🎮 Epic", "(.*)"),
     createSelectGroup("🎮 EpicDownload", "(.*)"),
