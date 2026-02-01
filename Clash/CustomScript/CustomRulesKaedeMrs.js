@@ -228,7 +228,7 @@ function main(config) {
     {
       name: "🧱Blocked Services",
       type: "select",
-      proxies: ["REJECT", MainProxyGroup]
+      proxies: ["REJECT", MainProxyGroup, ...filterProxies(/.*/)]
     },
     {
       name: "🇨🇳China Services",
