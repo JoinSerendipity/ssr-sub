@@ -33,15 +33,6 @@ function main(config) {
       proxy: "DIRECT",
       interval: 86400,
     },
-    "Bahamut-Site": {
-      type: "http",
-      behavior: "domain",
-      format: "mrs",
-      url: "https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.2/mihomo/Bahamut/Bahamut-Site.mrs",
-      path: "./ruleset/Bahamut-Site.mrs",
-      proxy: "DIRECT",
-      interval: 86400,
-    },
     "Bilibili-Site": {
       type: "http",
       behavior: "domain",
@@ -317,7 +308,6 @@ function main(config) {
     groupAuto,
 
     // 地区/服务特定组 (尝试匹配常见的节点关键字)
-    createGroup("🌸Bahamut", "(台湾|Taiwan|TW)"),
     createGroup("🇨🇳 Taiwan", "(台湾|Taiwan|TW)"),
     createGroup("🇭🇰 HongKong", "(香港|Hong Kong|HK)"),
     createGroup("📺Bilibili", "(香港|Hong Kong|HK|台湾|Taiwan|TW|CN|China)"),
@@ -403,7 +393,6 @@ function main(config) {
         "https://cloudflare-dns.com/dns-query#🔍Google",
 
       // Rule-Set DNS 分流映射 (对应 Rule Providers 和 Proxy Groups)
-      "rule-set:Bahamut-Site": "https://cloudflare-dns.com/dns-query#🌸Bahamut",
       "rule-set:Taiwan-Site": "https://cloudflare-dns.com/dns-query#🇨🇳 Taiwan",
       "rule-set:HongKong-Site":
         "https://cloudflare-dns.com/dns-query#🇭🇰 HongKong",
@@ -458,7 +447,6 @@ function main(config) {
     "DOMAIN-KEYWORD,youtube, 🔍Google",
 
     // Rule Sets
-    "RULE-SET,Bahamut-Site,🌸Bahamut",
     "RULE-SET,Bilibili-Site,📺Bilibili",
     "RULE-SET,Taiwan-Site,🇨🇳 Taiwan",
     "RULE-SET,HongKong-Site,🇭🇰 HongKong",
