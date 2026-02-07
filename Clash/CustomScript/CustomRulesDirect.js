@@ -110,7 +110,7 @@ function main(config) {
     groupAuto,   // ♻️ 自动选择
     createSelectGroup("💬 ChatGPT", "(.*)"),
     createSelectGroup("📽️ Netflix", "(.*)"),
-    createSelectGroup("🇨🇳 Taiwan", "(台湾|Taiwan|TW)"),
+    createSelectGroup("🇨🇳 Taiwan", "(台湾|Taiwan|TW|香港|Hong Kong|HK)"),
     createSelectGroup("🎬 BILIBILI", "(香港|Hong Kong|台湾|Taiwan|TW)"),
     createSelectGroup("🎮 Steam 登录/下载", "(.*)"),
     createSelectGroup("🎮 Steam 商店/社区", "(.*)"),
