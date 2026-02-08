@@ -168,7 +168,7 @@ const ruleProviderSources = {
     url_mrs:
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetMrs/Reject.mrs",
     proxy: "DIRECT",
-    behavior: "domin",
+    behavior: "domain",
     interval: 86400,
   },
   BanProgramAD: {
