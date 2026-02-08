@@ -235,14 +235,14 @@ const ruleProviderSources = {
     behavior: "domain",
     interval: 86400,
   },
-  ChinaCompany: {
-    url_yaml: null,
-    url_mrs:
-      "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetMrs/ChinaCompanyIp.mrs",
-    proxy: "DIRECT",
-    behavior: "ipcidr",
-    interval: 86400,
-  },
+  // ChinaCompany: {
+  //   url_yaml: null,
+  //   url_mrs:
+  //     "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetMrs/ChinaCompanyIp.mrs",
+  //   proxy: "DIRECT",
+  //   behavior: "ipcidr",
+  //   interval: 86400,
+  // },
 };
 
 // --- 工具函数：选择 url 和 format ---
@@ -480,8 +480,8 @@ function main(config) {
         "https://dns.alidns.com/dns-query#🎯 全球直连",
       "rule-set:ChinaDomain-Site":
         "https://dns.alidns.com/dns-query#🎯 全球直连",
-      "rule-set:ChinaCompany-IP":
-        "https://dns.alidns.com/dns-query#🎯 全球直连",
+      // "rule-set:ChinaCompany-IP":
+      //   "https://dns.alidns.com/dns-query#🎯 全球直连",
       "rule-set:LocalAreaNetwork-Site":
         "https://dns.alidns.com/dns-query#🎯 全球直连",
     },
@@ -528,7 +528,7 @@ function main(config) {
     // 剩余直连规则
     "RULE-SET,CustomDirect-Site,🎯 全球直连",
     "RULE-SET,ChinaDomain-Site,🎯 全球直连",
-    "RULE-SET,ChinaCompany-IP,🎯 全球直连",
+    // "RULE-SET,ChinaCompany-IP,🎯 全球直连",
 
     // GeoIP 规则
     "GEOIP,CN,🎯 全球直连",
