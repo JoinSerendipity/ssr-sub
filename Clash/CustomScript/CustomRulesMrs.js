@@ -337,11 +337,10 @@ function main(config) {
   const groups = [
     groupSelect,
     groupAuto,
-    groupMainProxy,
 
     createSelectGroup("💬 ChatGPT", "(.*)"),
     createSelectGroup("📽️ Netflix", "(.*)"),
-    createSelectGroup("🇨🇳 Taiwan", "(台湾|Taiwan|TW)"),
+    createSelectGroup("🇨🇳 Taiwan", "(台湾|Taiwan|TW|香港|Hong Kong|HK)"),
     createSelectGroup("🎬 BILIBILI", "(香港|Hong Kong|台湾|Taiwan|TW)"),
     createSelectGroup("🎮 Steam 登录/下载", "(.*)"),
     createSelectGroup("🎮 Steam 商店/社区", "(.*)"),
