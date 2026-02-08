@@ -16,13 +16,13 @@ const ruleProviderSources = {
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/LocalAreaNetwork.yaml",
     url_mrs: null,
     proxy: "DIRECT",
-    behavior: "domain",
+    behavior: "classical",
     interval: 86400,
   },
   ChatGPT: {
-    url_yaml:
-      "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/ChatGPT.yaml",
-    url_mrs: null,
+    url_yaml: null,
+    url_mrs:
+      "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetMrs/ChatGPT.mrs",
     proxy: "DIRECT",
     behavior: "domain",
     interval: 86400,
@@ -32,13 +32,13 @@ const ruleProviderSources = {
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/Netflix.yaml",
     url_mrs: null,
     proxy: "DIRECT",
-    behavior: "domain",
+    behavior: "classical",
     interval: 86400,
   },
   Taiwan: {
-    url_yaml:
-      "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/Taiwan.yaml",
-    url_mrs: null,
+    url_yaml: null,
+    url_mrs:
+      "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetMrs/Taiwan.mrs",
     proxy: "DIRECT",
     behavior: "domain",
     interval: 86400,
@@ -48,7 +48,7 @@ const ruleProviderSources = {
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/bilibili.yaml",
     url_mrs: null,
     proxy: "DIRECT",
-    behavior: "domain",
+    behavior: "classical",
     interval: 86400,
   },
   SteamDownload: {
@@ -56,7 +56,7 @@ const ruleProviderSources = {
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/SteamDownload.yaml",
     url_mrs: null,
     proxy: "DIRECT",
-    behavior: "domain",
+    behavior: "classical",
     interval: 86400,
   },
   Steam: {
@@ -64,7 +64,7 @@ const ruleProviderSources = {
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/Steam.yaml",
     url_mrs: null,
     proxy: "DIRECT",
-    behavior: "domain",
+    behavior: "classical",
     interval: 86400,
   },
   PikPak: {
@@ -72,7 +72,7 @@ const ruleProviderSources = {
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/PikPak.yaml",
     url_mrs: null,
     proxy: "DIRECT",
-    behavior: "domain",
+    behavior: "classical",
     interval: 86400,
   },
   HongKong: {
@@ -80,7 +80,7 @@ const ruleProviderSources = {
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/HongKong.yaml",
     url_mrs: null,
     proxy: "DIRECT",
-    behavior: "domain",
+    behavior: "classical",
     interval: 86400,
   },
   Tiktok: {
@@ -88,7 +88,7 @@ const ruleProviderSources = {
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/Tiktok.yaml",
     url_mrs: null,
     proxy: "DIRECT",
-    behavior: "domain",
+    behavior: "classical",
     interval: 86400,
   },
   Twitch: {
@@ -96,7 +96,7 @@ const ruleProviderSources = {
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/Twitch.yaml",
     url_mrs: null,
     proxy: "DIRECT",
-    behavior: "domain",
+    behavior: "classical",
     interval: 86400,
   },
   Disney: {
@@ -104,7 +104,7 @@ const ruleProviderSources = {
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/Disney.yaml",
     url_mrs: null,
     proxy: "DIRECT",
-    behavior: "domain",
+    behavior: "classical",
     interval: 86400,
   },
   Japan: {
@@ -112,7 +112,7 @@ const ruleProviderSources = {
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/Japan.yaml",
     url_mrs: null,
     proxy: "DIRECT",
-    behavior: "domain",
+    behavior: "classical",
     interval: 86400,
   },
   Korea: {
@@ -120,7 +120,7 @@ const ruleProviderSources = {
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/Korea.yaml",
     url_mrs: null,
     proxy: "DIRECT",
-    behavior: "domain",
+    behavior: "classical",
     interval: 86400,
   },
   Epic: {
@@ -128,7 +128,7 @@ const ruleProviderSources = {
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/Epic.yaml",
     url_mrs: null,
     proxy: "DIRECT",
-    behavior: "domain",
+    behavior: "classical",
     interval: 86400,
   },
   EpicDownload: {
@@ -136,7 +136,7 @@ const ruleProviderSources = {
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/EpicDownload.yaml",
     url_mrs: null,
     proxy: "DIRECT",
-    behavior: "domain",
+    behavior: "classical",
     interval: 86400,
   },
   Emby: {
@@ -144,7 +144,7 @@ const ruleProviderSources = {
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/Emby.yaml",
     url_mrs: null,
     proxy: "DIRECT",
-    behavior: "domain",
+    behavior: "classical",
     interval: 86400,
   },
   Porn: {
@@ -152,7 +152,7 @@ const ruleProviderSources = {
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/Porn.yaml",
     url_mrs: null,
     proxy: "DIRECT",
-    behavior: "domain",
+    behavior: "classical",
     interval: 86400,
   },
   BanAD: {
@@ -160,7 +160,15 @@ const ruleProviderSources = {
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/BanAD.yaml",
     url_mrs: null,
     proxy: "DIRECT",
-    behavior: "domain",
+    behavior: "classical",
+    interval: 86400,
+  },
+  Reject: {
+    url_yaml: null,
+    url_mrs:
+      "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetMrs/Reject.mrs",
+    proxy: "DIRECT",
+    behavior: "domin",
     interval: 86400,
   },
   BanProgramAD: {
@@ -168,7 +176,7 @@ const ruleProviderSources = {
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/BanProgramAD.yaml",
     url_mrs: null,
     proxy: "DIRECT",
-    behavior: "domain",
+    behavior: "classical",
     interval: 86400,
   },
   Google: {
@@ -192,7 +200,7 @@ const ruleProviderSources = {
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/Microsoft.yaml",
     url_mrs: null,
     proxy: "DIRECT",
-    behavior: "domain",
+    behavior: "classical",
     interval: 86400,
   },
   ProxyList: {
@@ -200,7 +208,7 @@ const ruleProviderSources = {
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/ProxyList.yaml",
     url_mrs: null,
     proxy: "DIRECT",
-    behavior: "domain",
+    behavior: "classical",
     interval: 86400,
   },
   Proxy: {
@@ -208,7 +216,7 @@ const ruleProviderSources = {
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/Proxy.yaml",
     url_mrs: null,
     proxy: "DIRECT",
-    behavior: "domain",
+    behavior: "classical",
     interval: 86400,
   },
   CustomDirect: {
@@ -216,7 +224,7 @@ const ruleProviderSources = {
       "https://raw.githubusercontent.com/JoinSerendipity/ssr-sub/refs/heads/master/Clash/RuleSetYaml/CustomDirect.yaml",
     url_mrs: null,
     proxy: "DIRECT",
-    behavior: "domain",
+    behavior: "classical",
     interval: 86400,
   },
   ChinaDomain: {
@@ -254,7 +262,7 @@ function buildRuleProviders() {
 
     const ext = picked.format === "mrs" ? "mrs" : "yaml";
     let name;
-    meta.behavior === "domain"
+    meta.behavior === "domain" || meta.behavior === "classical"
       ? (name = `${base}-Site`)
       : (name = `${base}-IP`);
 
@@ -274,7 +282,7 @@ function buildRuleProviders() {
 function main(config) {
   // 1) 注入 rule-providers（符合你贴的格式）
   config["rule-providers"] = {
-    ...config["rule-providers"],
+    // ...config["rule-providers"],
     ...buildRuleProviders(),
   };
 
@@ -457,6 +465,7 @@ function main(config) {
       "rule-set:Porn-Site": "https://cloudflare-dns.com/dns-query#🌍 国外媒体",
 
       "rule-set:BanAD-Site": "https://dns.alidns.com/dns-query#🛑 全球拦截",
+      "rule-set:Reject-Site": "https://dns.alidns.com/dns-query#🛑 全球拦截",
       "rule-set:BanProgramAD-Site":
         "https://dns.alidns.com/dns-query#🍃 应用净化",
 
@@ -504,6 +513,7 @@ function main(config) {
 
     // 拦截规则
     "RULE-SET,BanAD-Site,🛑 全球拦截",
+    "RULE-SET,Reject-Site,🛑 全球拦截",
     "RULE-SET,BanProgramAD-Site,🍃 应用净化",
 
     // 谷歌 & 微软
