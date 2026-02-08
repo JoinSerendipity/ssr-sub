@@ -470,7 +470,7 @@ function main(config) {
         "https://dns.alidns.com/dns-query#🍃 应用净化",
 
       "rule-set:Google-Site": "https://cloudflare-dns.com/dns-query#🈲 Google",
-      "rule-set:GoogleCN-Site": "https://dns.alidns.com/dns-query#🎯 全球直连",
+      "rule-set:GoogleCN-Site": "https://dns.alidns.com/dns-query#🈲 Google",
       "rule-set:Microsoft-Site": "https://doh.pub/dns-query#Ⓜ️ Microsoft",
 
       "rule-set:ProxyList-Site": `https://cloudflare-dns.com/dns-query#${manualSelectGroup}`,
@@ -518,7 +518,7 @@ function main(config) {
 
     // 谷歌 & 微软
     "RULE-SET,Google-Site,🈲 Google",
-    "RULE-SET,GoogleCN-Site,🎯 全球直连",
+    "RULE-SET,GoogleCN-Site,🈲 Google",
     "RULE-SET,Microsoft-Site,Ⓜ️ Microsoft",
 
     // 节点选择规则
