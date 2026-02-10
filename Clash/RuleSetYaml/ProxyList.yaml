@@ -50,4 +50,6 @@ payload:
   - DOMAIN-SUFFIX,nodeloc.com
   - DOMAIN-SUFFIX,immersivetranslate.com
   - DOMAIN-SUFFIX,1music.cc
+  - DOMAIN-SUFFIX,redditstatus.com
+  - DOMAIN-SUFFIX,reddithelp.com
   - DOMAIN-KEYWORD,angular
