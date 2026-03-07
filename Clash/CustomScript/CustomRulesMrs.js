@@ -280,18 +280,114 @@ function buildRuleProviders() {
 }
 
 function main(config) {
-  // 1) 注入 rule-providers（符合你贴的格式）
+  // 1) 注入 DNS（“像他一样”的结构：nameserver-policy rule-set:XXX-Site）
+  // 说明：DNS 的 rule-set 必须是 domain 行为；我们这里全部是 XXX-Site
+  config.dns = {
+    enable: true,
+    "prefer-h3": false,
+    listen: "0.0.0.0:1053",
+    ipv6: false,
+    "enhanced-mode": "fake-ip",
+    "fake-ip-range": "198.18.0.1/16",
+    "fake-ip-filter": [
+      "+.lan",
+      "+.local",
+      "localhost.ptlogin2.qq.com",
+      "+.msftconnecttest.com",
+      "+.msftncsi.com",
+      "+.googleapis.com",
+      "+.googleapis.cn",
+      "mtalk.google.com",
+      "alt1-mtalk.google.com",
+      "alt2-mtalk.google.com",
+      "alt3-mtalk.google.com",
+      "alt4-mtalk.google.com",
+      "alt5-mtalk.google.com",
+      "alt6-mtalk.google.com",
+      "alt7-mtalk.google.com",
+      "alt8-mtalk.google.com",
+    ],
+    "use-hosts": true,
+    "default-nameserver": [
+      "114.114.114.114#DIRECT",
+      "223.5.5.5#DIRECT",
+      "119.29.29.29#DIRECT",
+      "180.76.76.76#DIRECT",
+      "180.184.1.1#DIRECT",
+    ],
+    "proxy-server-nameserver": [
+      "https://dns.alidns.com/dns-query#DIRECT",
+      "https://doh.pub/dns-query#DIRECT",
+      "https://doh.onedns.net/dns-query#DIRECT",
+    ],
+    nameserver: [`https://cloudflare-dns.com/dns-query#${manualSelectGroup}`],
+    "nameserver-policy": {
+      "ntp.aliyun.com": "https://dns.alidns.com/dns-query#DIRECT",
+      "+.jsdmirror.com": "https://dns.alidns.com/dns-query#DIRECT",
+      "fastly.jsdelivr.net": "https://dns.alidns.com/dns-query#DIRECT",
+
+      "+.msftconnecttest.com,+.msftncsi.com": `https://cloudflare-dns.com/dns-query#${manualSelectGroup}`,
+      "+.googleapis.com,+.googleapis.cn":
+        "https://cloudflare-dns.com/dns-query#🈲 Google",
+
+      // 你的规则集 DNS 分流（按你自己的策略组名）
+      "rule-set:ChatGPT-Site":
+        "https://cloudflare-dns.com/dns-query#💬 ChatGPT",
+      "rule-set:Netflix-Site":
+        "https://cloudflare-dns.com/dns-query#📽️ Netflix",
+      "rule-set:Taiwan-Site": "https://dns.alidns.com/dns-query#🇨🇳 Taiwan",
+      "rule-set:BILIBILI-Site": "https://dns.alidns.com/dns-query#🎬 BILIBILI",
+      "rule-set:SteamDownload-Site":
+        "https://doh.pub/dns-query#🎮 Steam 登录/下载",
+      "rule-set:Steam-Site": "https://doh.pub/dns-query#🎮 Steam 商店/社区",
+      "rule-set:PikPak-Site": "https://cloudflare-dns.com/dns-query#🛠 PIKPAK",
+      "rule-set:HongKong-Site": "https://dns.alidns.com/dns-query#🇭🇰 HongKong",
+      "rule-set:Tiktok-Site": "https://cloudflare-dns.com/dns-query#📺 TIKTOK",
+      "rule-set:Twitch-Site": "https://cloudflare-dns.com/dns-query#🎙 Twitch",
+      "rule-set:Disney-Site": "https://cloudflare-dns.com/dns-query#🎥 Disney",
+      "rule-set:Japan-Site": "https://dns.alidns.com/dns-query#🇯🇵 Japan",
+      "rule-set:Korea-Site": "https://dns.alidns.com/dns-query#🇰🇷 Korea",
+      "rule-set:Epic-Site": "https://cloudflare-dns.com/dns-query#🎮 Epic",
+      "rule-set:EpicDownload-Site":
+        "https://cloudflare-dns.com/dns-query#🎮 EpicDownload",
+      "rule-set:Emby-Site": "https://cloudflare-dns.com/dns-query#🖥 Emby",
+      "rule-set:Porn-Site": "https://cloudflare-dns.com/dns-query#🌍 国外媒体",
+
+      "rule-set:BanAD-Site": "https://dns.alidns.com/dns-query#🛑 全球拦截",
+      "rule-set:Reject-Site": "https://dns.alidns.com/dns-query#🛑 全球拦截",
+      "rule-set:BanProgramAD-Site":
+        "https://dns.alidns.com/dns-query#🍃 应用净化",
+
+      "rule-set:Google-Site": "https://cloudflare-dns.com/dns-query#🈲 Google",
+      "rule-set:GoogleCN-Site": "https://dns.alidns.com/dns-query#🈲 Google",
+      "rule-set:Microsoft-Site": "https://doh.pub/dns-query#Ⓜ️ Microsoft",
+
+      "rule-set:ProxyList-Site": `https://cloudflare-dns.com/dns-query#${manualSelectGroup}`,
+      "rule-set:Proxy-Site": `https://cloudflare-dns.com/dns-query#${manualSelectGroup}`,
+
+      "rule-set:CustomDirect-Site":
+        "https://dns.alidns.com/dns-query#🎯 全球直连",
+      "rule-set:ChinaDomain-Site":
+        "https://dns.alidns.com/dns-query#🎯 全球直连",
+      // "rule-set:ChinaCompany-IP":
+      //   "https://dns.alidns.com/dns-query#🎯 全球直连",
+      "rule-set:LocalAreaNetwork-Site":
+        "https://dns.alidns.com/dns-query#🎯 全球直连",
+    },
+  };
+
+  // 2) 注入 rule-providers（符合你贴的格式）
   config["rule-providers"] = {
     // ...config["rule-providers"],
     ...buildRuleProviders(),
   };
 
-  // 2) 提取当前订阅中的所有代理节点名称
+  // 3) 提取当前订阅中的所有代理节点名称
   const allProxies = (config.proxies || []).map((p) => p.name);
   const filterProxies = (regex) =>
     allProxies.filter((name) => regex.test(name));
 
-  // 3) 代理组（保持你原来的逻辑）
+  // 4) 代理组（保持你原来的逻辑）
   const manualSelectGroup = "🚀 节点选择";
   const autoSelectGroup = "♻️ 自动选择";
   const directGroup = "🎯 全球直连";
@@ -390,102 +486,6 @@ function main(config) {
   ];
 
   config["proxy-groups"] = groups;
-
-  // 4) 注入 DNS（“像他一样”的结构：nameserver-policy rule-set:XXX-Site）
-  // 说明：DNS 的 rule-set 必须是 domain 行为；我们这里全部是 XXX-Site
-  config.dns = {
-    enable: true,
-    "prefer-h3": false,
-    listen: "0.0.0.0:1053",
-    ipv6: false,
-    "enhanced-mode": "fake-ip",
-    "fake-ip-range": "198.18.0.1/16",
-    "fake-ip-filter": [
-      "+.lan",
-      "+.local",
-      "localhost.ptlogin2.qq.com",
-      "+.msftconnecttest.com",
-      "+.msftncsi.com",
-      "+.googleapis.com",
-      "+.googleapis.cn",
-      "mtalk.google.com",
-      "alt1-mtalk.google.com",
-      "alt2-mtalk.google.com",
-      "alt3-mtalk.google.com",
-      "alt4-mtalk.google.com",
-      "alt5-mtalk.google.com",
-      "alt6-mtalk.google.com",
-      "alt7-mtalk.google.com",
-      "alt8-mtalk.google.com",
-    ],
-    "use-hosts": true,
-    "default-nameserver": [
-      "114.114.114.114#DIRECT",
-      "223.5.5.5#DIRECT",
-      "119.29.29.29#DIRECT",
-      "180.76.76.76#DIRECT",
-      "180.184.1.1#DIRECT",
-    ],
-    "proxy-server-nameserver": [
-      "https://dns.alidns.com/dns-query#DIRECT",
-      "https://doh.pub/dns-query#DIRECT",
-      "https://doh.onedns.net/dns-query#DIRECT",
-    ],
-    nameserver: [`https://cloudflare-dns.com/dns-query#${manualSelectGroup}`],
-    "nameserver-policy": {
-      "ntp.aliyun.com": "https://dns.alidns.com/dns-query#DIRECT",
-      "+.jsdmirror.com": "https://dns.alidns.com/dns-query#DIRECT",
-      "fastly.jsdelivr.net": "https://dns.alidns.com/dns-query#DIRECT",
-
-      "+.msftconnecttest.com,+.msftncsi.com": `https://cloudflare-dns.com/dns-query#${manualSelectGroup}`,
-      "+.googleapis.com,+.googleapis.cn":
-        "https://cloudflare-dns.com/dns-query#🈲 Google",
-
-      // 你的规则集 DNS 分流（按你自己的策略组名）
-      "rule-set:ChatGPT-Site":
-        "https://cloudflare-dns.com/dns-query#💬 ChatGPT",
-      "rule-set:Netflix-Site":
-        "https://cloudflare-dns.com/dns-query#📽️ Netflix",
-      "rule-set:Taiwan-Site": "https://dns.alidns.com/dns-query#🇨🇳 Taiwan",
-      "rule-set:BILIBILI-Site": "https://dns.alidns.com/dns-query#🎬 BILIBILI",
-      "rule-set:SteamDownload-Site":
-        "https://doh.pub/dns-query#🎮 Steam 登录/下载",
-      "rule-set:Steam-Site": "https://doh.pub/dns-query#🎮 Steam 商店/社区",
-      "rule-set:PikPak-Site": "https://cloudflare-dns.com/dns-query#🛠 PIKPAK",
-      "rule-set:HongKong-Site": "https://dns.alidns.com/dns-query#🇭🇰 HongKong",
-      "rule-set:Tiktok-Site": "https://cloudflare-dns.com/dns-query#📺 TIKTOK",
-      "rule-set:Twitch-Site": "https://cloudflare-dns.com/dns-query#🎙 Twitch",
-      "rule-set:Disney-Site": "https://cloudflare-dns.com/dns-query#🎥 Disney",
-      "rule-set:Japan-Site": "https://dns.alidns.com/dns-query#🇯🇵 Japan",
-      "rule-set:Korea-Site": "https://dns.alidns.com/dns-query#🇰🇷 Korea",
-      "rule-set:Epic-Site": "https://cloudflare-dns.com/dns-query#🎮 Epic",
-      "rule-set:EpicDownload-Site":
-        "https://cloudflare-dns.com/dns-query#🎮 EpicDownload",
-      "rule-set:Emby-Site": "https://cloudflare-dns.com/dns-query#🖥 Emby",
-      "rule-set:Porn-Site": "https://cloudflare-dns.com/dns-query#🌍 国外媒体",
-
-      "rule-set:BanAD-Site": "https://dns.alidns.com/dns-query#🛑 全球拦截",
-      "rule-set:Reject-Site": "https://dns.alidns.com/dns-query#🛑 全球拦截",
-      "rule-set:BanProgramAD-Site":
-        "https://dns.alidns.com/dns-query#🍃 应用净化",
-
-      "rule-set:Google-Site": "https://cloudflare-dns.com/dns-query#🈲 Google",
-      "rule-set:GoogleCN-Site": "https://dns.alidns.com/dns-query#🈲 Google",
-      "rule-set:Microsoft-Site": "https://doh.pub/dns-query#Ⓜ️ Microsoft",
-
-      "rule-set:ProxyList-Site": `https://cloudflare-dns.com/dns-query#${manualSelectGroup}`,
-      "rule-set:Proxy-Site": `https://cloudflare-dns.com/dns-query#${manualSelectGroup}`,
-
-      "rule-set:CustomDirect-Site":
-        "https://dns.alidns.com/dns-query#🎯 全球直连",
-      "rule-set:ChinaDomain-Site":
-        "https://dns.alidns.com/dns-query#🎯 全球直连",
-      // "rule-set:ChinaCompany-IP":
-      //   "https://dns.alidns.com/dns-query#🎯 全球直连",
-      "rule-set:LocalAreaNetwork-Site":
-        "https://dns.alidns.com/dns-query#🎯 全球直连",
-    },
-  };
 
   // 5) Rules（保持你原规则逻辑，只把 RULE-SET 名称换成 XXX-Site）
   const rules = [
