@@ -280,7 +280,12 @@ function buildRuleProviders() {
 }
 
 function main(config) {
-  // 1) 注入 DNS（“像他一样”的结构：nameserver-policy rule-set:XXX-Site）
+  // 1) 代理组（保持你原来的逻辑）
+  const manualSelectGroup = "🚀 节点选择";
+  const autoSelectGroup = "♻️ 自动选择";
+  const directGroup = "🎯 全球直连";
+
+  // 2) 注入 DNS（“像他一样”的结构：nameserver-policy rule-set:XXX-Site）
   // 说明：DNS 的 rule-set 必须是 domain 行为；我们这里全部是 XXX-Site
   config.dns = {
     enable: true,
@@ -376,21 +381,16 @@ function main(config) {
     },
   };
 
-  // 2) 注入 rule-providers（符合你贴的格式）
+  // 3) 注入 rule-providers（符合你贴的格式）
   config["rule-providers"] = {
     // ...config["rule-providers"],
     ...buildRuleProviders(),
   };
 
-  // 3) 提取当前订阅中的所有代理节点名称
+  // 4) 提取当前订阅中的所有代理节点名称
   const allProxies = (config.proxies || []).map((p) => p.name);
   const filterProxies = (regex) =>
     allProxies.filter((name) => regex.test(name));
-
-  // 4) 代理组（保持你原来的逻辑）
-  const manualSelectGroup = "🚀 节点选择";
-  const autoSelectGroup = "♻️ 自动选择";
-  const directGroup = "🎯 全球直连";
 
   // 新增：主代理出口组（DNS 里 nameserver 需要它）
   //   const mainProxyGroup = "🌏️Main Proxy";
