@@ -54,3 +54,24 @@ payload:
   - DOMAIN-SUFFIX,reddithelp.com
   - DOMAIN-SUFFIX,duangks.com
   - DOMAIN-KEYWORD,angular
+  # ===== Threads =====
+  - DOMAIN,threads.com,THREADS
+  - DOMAIN,www.threads.com,THREADS
+  - DOMAIN,threads.net,THREADS
+  - DOMAIN,www.threads.net,THREADS
+  - DOMAIN,graph.threads.net,THREADS
+
+  # ===== Instagram 账号体系 =====
+  - DOMAIN-SUFFIX,instagram.com,THREADS
+  - DOMAIN-SUFFIX,cdninstagram.com,THREADS
+  - DOMAIN-SUFFIX,ig.me,THREADS
+
+  # ===== Meta / Facebook 资源 =====
+  - DOMAIN-SUFFIX,facebook.com,THREADS
+  - DOMAIN-SUFFIX,fbcdn.net,THREADS
+  - DOMAIN-SUFFIX,fbsbx.com,THREADS
+  - DOMAIN-SUFFIX,meta.com,THREADS
+  - DOMAIN-SUFFIX,facebook.net,THREADS
+
+  # ===== QUIC/UDP 兜底时可选 =====
+  - DOMAIN-KEYWORD,threads,THREADS
