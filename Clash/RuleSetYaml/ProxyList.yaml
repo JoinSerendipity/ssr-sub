@@ -55,9 +55,12 @@ payload:
   - DOMAIN-SUFFIX,duangks.com
   - DOMAIN-KEYWORD,angular
   # ===== Threads =====
+  - DOMAIN-SUFFIX,threads.com
+  - DOMAIN-SUFFIX,threads.net
   - DOMAIN,threads.com
   - DOMAIN,www.threads.com
   - DOMAIN,threads.net
+
   - DOMAIN,www.threads.net
   - DOMAIN,graph.threads.net
 
