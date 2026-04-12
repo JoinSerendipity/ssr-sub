@@ -78,3 +78,4 @@ payload:
 
   # ===== QUIC/UDP 兜底时可选 =====
   - DOMAIN-KEYWORD,threads
+  - DOMAIN-SUFFIX,duokan.club
