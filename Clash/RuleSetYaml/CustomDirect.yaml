@@ -2,3 +2,5 @@
 payload:
   - DOMAIN-SUFFIX,mojidict.com
   - DOMAIN-SUFFIX,stripe.com
+  - DOMAIN-SUFFIX,123pan.cn
+  - DOMAIN-SUFFIX,123pan.com
